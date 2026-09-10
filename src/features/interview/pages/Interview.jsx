@@ -1,4 +1,8 @@
 import { useState , useEffect } from 'react'
+import { useInterview } from '../hooks/useInterview'
+import { useParams } from 'react-router'
+// import InterviewSkeleton from "../../../components/InterviewSkeleton";
+
 import {
   ArrowLeft,
   BookOpen,
@@ -15,9 +19,6 @@ import {
   X,
   PencilSparkles
 } from 'lucide-react'
-import { useInterview } from '../hooks/useInterview'
-import { useParams } from 'react-router'
-import InterviewSkeleton from '../../../components/interviewskeleton'
 
 
 const sections = [
@@ -50,7 +51,7 @@ const Interview = () => {
 
   
   if(loading || !interviewData){
-    return <InterviewSkeleton/>
+    return <h1>Loading...</h1>  
   }
 
   const questions = activeSection === "behavioral" ? interviewData.behavioralQuestions : interviewData.technicalQuestions
