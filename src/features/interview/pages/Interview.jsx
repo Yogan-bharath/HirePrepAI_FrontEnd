@@ -19,6 +19,8 @@ import {
   X,
   PencilSparkles
 } from 'lucide-react'
+import Loading from '../../../components/Loading'
+import InterviewSkeleton from '../../../components/InterviewSkeleton'
 
 
 const sections = [
@@ -51,7 +53,7 @@ const Interview = () => {
 
   
   if(loading || !interviewData){
-    return <h1>Loading...</h1>  
+    return <InterviewSkeleton/>
   }
 
   const questions = activeSection === "behavioral" ? interviewData.behavioralQuestions : interviewData.technicalQuestions

@@ -5,6 +5,7 @@ import {ArrowUpRight} from "lucide-react"
 import { NavLink, useNavigate } from 'react-router'
 import { toast } from 'react-toastify'
 import { useAuth } from '../hook/useAuth'
+import Loading from '../../../components/Loading'
 const LoginPage = () => {
   const { register , handleSubmit , reset } = useForm()
   const { loading , handleLogin } = useAuth();
@@ -14,7 +15,7 @@ const LoginPage = () => {
         await handleLogin(data);
         toast.success("login Successfully")
         reset()
-        navigate("/home")
+        navigate("/home",{replace:true})
     }catch(err){
         toast.error(err.message);
     }
