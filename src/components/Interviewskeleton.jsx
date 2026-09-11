@@ -1,5 +1,11 @@
 
 const InterviewSkeleton = () => {
+  const Shimmer = ({ className = '' }) => (
+    <div className={`relative overflow-hidden bg-[#e7e9ee] ${className}`}>
+      <div className="absolute inset-0 -translate-x-full animate-[shimmer_1.6s_infinite] bg-gradient-to-r from-transparent via-white/60 to-transparent" />
+    </div>
+  )
+  
   return (
     <main className="min-h-screen bg-[#f3f3f2] px-3 py-3 text-[#1f2937] sm:px-5 sm:py-5">
       <div className="mx-auto flex min-h-[calc(100vh-1.5rem)] max-w-355 overflow-hidden rounded-[22px] border border-[#d9dce0] bg-white shadow-[0_8px_30px_rgba(31,41,55,0.04)]">
@@ -132,12 +138,5 @@ const ProfileMatchSkeleton = ({ compact = false }) => (
     </div>
   </div>
 )
-
-const Shimmer = ({ className = '' }) => (
-  <div className={`relative overflow-hidden bg-[#e7e9ee] ${className}`}>
-    <div className="absolute inset-0 -translate-x-full animate-[shimmer_1.6s_infinite] bg-gradient-to-r from-transparent via-white/60 to-transparent" />
-  </div>
-)
-
 
 export default InterviewSkeleton
