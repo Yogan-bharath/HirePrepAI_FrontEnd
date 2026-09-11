@@ -1,10 +1,10 @@
 
+const Shimmer = ({ className = '' }) => (
+  <div className={`relative overflow-hidden bg-[#e7e9ee] ${className}`}>
+    <div className="absolute inset-0 -translate-x-full animate-[shimmer_1.6s_infinite] bg-gradient-to-r from-transparent via-white/60 to-transparent" />
+  </div>
+)
 const InterviewSkeleton = () => {
-  const Shimmer = ({ className = '' }) => (
-    <div className={`relative overflow-hidden bg-[#e7e9ee] ${className}`}>
-      <div className="absolute inset-0 -translate-x-full animate-[shimmer_1.6s_infinite] bg-gradient-to-r from-transparent via-white/60 to-transparent" />
-    </div>
-  )
   
   return (
     <main className="min-h-screen bg-[#f3f3f2] px-3 py-3 text-[#1f2937] sm:px-5 sm:py-5">
