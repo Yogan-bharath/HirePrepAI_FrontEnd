@@ -19,8 +19,7 @@ import {
   X,
   PencilSparkles
 } from 'lucide-react'
-import Loading from '../../../components/Loading'
-import InterviewSkeleton from '../../../components/InterviewSkeleton'
+import InterviewSkeleton from './InterviewSkeleton'
 
 
 const sections = [
