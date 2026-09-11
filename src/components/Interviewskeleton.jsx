@@ -1,8 +1,3 @@
-const Shimmer = ({ className = '' }) => (
-  <div className={`relative overflow-hidden bg-[#e7e9ee] ${className}`}>
-    <div className="absolute inset-0 -translate-x-full animate-[shimmer_1.6s_infinite] bg-gradient-to-r from-transparent via-white/60 to-transparent" />
-  </div>
-)
 
 const InterviewSkeleton = () => {
   return (
@@ -137,5 +132,12 @@ const ProfileMatchSkeleton = ({ compact = false }) => (
     </div>
   </div>
 )
+
+const Shimmer = ({ className = '' }) => (
+  <div className={`relative overflow-hidden bg-[#e7e9ee] ${className}`}>
+    <div className="absolute inset-0 -translate-x-full animate-[shimmer_1.6s_infinite] bg-gradient-to-r from-transparent via-white/60 to-transparent" />
+  </div>
+)
+
 
 export default InterviewSkeleton
